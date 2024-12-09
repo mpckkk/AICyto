@@ -49,10 +49,16 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
-          <li>
-            <a href="#projects">Project</a>
-            <small style="color: gray; font-size: 12px;">(Under Development)</small>
-          </li>
+          <li><a href="#projects" class="disabled-link" onclick="return false;">Project</a></li>
+          
+          <style>
+            .disabled-link {
+              pointer-events: none;
+              color: gray;
+              cursor: not-allowed;
+              text-decoration: none;
+            }
+          </style>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
