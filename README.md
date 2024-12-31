@@ -1,3 +1,3 @@
 ## AICyto Tech
 
-This is official AICyto Tech llc. codeplayground.
+This is official AICyto Tech LLC. code playground.
