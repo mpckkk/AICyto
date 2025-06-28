@@ -74,9 +74,9 @@
               </p>
               <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
-                <a href="https://makeavideo.studio" class="btn btn-link mt-2 mt-sm-0 glightbox">
-                  <i class="bi bi-play-circle me-1"></i>
-                  Play Video
+                <a href="#video-generator" class="btn btn-link mt-2 mt-sm-0">
+                  <i class="bi bi-film me-1"></i>
+                  Make Video
                 </a>
               </div>
             </div>
@@ -333,6 +333,25 @@
       </div>
     </section><!-- /Features Cards Section -->
 
+    <!-- Video Generator Section -->
+    <section id="video-generator" class="section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Video Generator</h2>
+        <p>Describe a scene and create a short video using OpenAI Sora.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="input-group">
+              <input id="video-prompt" type="text" class="form-control" placeholder="Enter video description">
+              <button id="video-generate-btn" class="btn btn-primary">Make Video</button>
+            </div>
+            <div id="video-output" class="mt-4 text-center"></div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Video Generator Section -->
+
     <!-- FAQ Section -->
     <section class="faq-9 faq section light-background" id="faq">
       <div class="container">
@@ -451,6 +470,48 @@
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // ===== Video Generator using OpenAI Sora =====
+    const videoBtn = document.getElementById('video-generate-btn');
+    const videoPromptInput = document.getElementById('video-prompt');
+    const videoOutput = document.getElementById('video-output');
+    function generateVideo() {
+      const prompt = videoPromptInput.value.trim();
+      if (!prompt) return;
+      videoBtn.disabled = true;
+      videoBtn.innerText = 'Generating...';
+      fetch('https://api.openai.com/v1/videos/generations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + AI_CYTO_OPENAI_KEY
+        },
+        body: JSON.stringify({
+          model: 'sora-1',
+          prompt: prompt
+        })
+      })
+      .then(r => r.json())
+      .then(data => {
+        const url = data.data?.[0]?.url;
+        if (url) {
+          videoOutput.innerHTML = '<video controls class="img-fluid rounded shadow"><source src="'+url+'" type="video/mp4"></video>';
+        } else {
+          videoOutput.innerHTML = '<p class="text-danger">Failed to generate video.</p>';
+        }
+        videoBtn.disabled = false;
+        videoBtn.innerText = 'Make Video';
+      })
+      .catch(() => {
+        videoOutput.innerHTML = '<p class="text-danger">Error contacting video service.</p>';
+        videoBtn.disabled = false;
+        videoBtn.innerText = 'Make Video';
+      });
+    }
+    if (videoBtn) {
+      videoBtn.addEventListener('click', generateVideo);
+    }
+  </script>
 <script>
 // ========== AICyto Tech AI Chatbot Widget (Education-Focused) ==========
 // ----- CONFIG -----
