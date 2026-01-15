@@ -25,6 +25,27 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* Additional styles for social links */
+    .social-links a {
+      color: #6c757d;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      color: #0062ff;
+    }
+    .social-links a.mx-3 {
+      margin: 0 1rem;
+    }
+    .disabled-link {
+      pointer-events: none;
+      color: gray;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body class="index-page">
   <header id="header" class="header d-flex align-items-center fixed-top">
@@ -38,14 +59,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#projects">Projects</a></li>
-          <style>
-            .disabled-link {
-              pointer-events: none;
-              color: gray;
-              cursor: not-allowed;
-              text-decoration: none;
-            }
-          </style>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -76,7 +89,7 @@
                 <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Get Started</a>
                 <a href="#video-generator" class="btn btn-link mt-2 mt-sm-0">
                   <i class="bi bi-film me-1"></i>
-                  Make Video
+                  Make Video (Coming Soon)
                 </a>
               </div>
             </div>
@@ -139,7 +152,7 @@
               </div>
               <div class="stat-content">
                 <h4>100+ AI Lessons</h4>
-                <p class="mb-0">Shaping tomorrow’s AI leaders</p>
+                <p class="mb-0">Shaping tomorrow's AI leaders</p>
               </div>
             </div>
           </div>
@@ -333,46 +346,43 @@
       </div>
     </section><!-- /Features Cards Section -->
 
-
-    <!-- Add this new section (e.g. after Features Cards) -->
-<section id="projects" class="projects section">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h2>Projects</h2>
-      <p>AI projects leveraging LLMs to discover and catalog all AI education tools, software, and platforms currently on the market.</p>
-    </div>
-    <div class="row">
-      <!-- Example project card; repeat as needed -->
-      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">AI Edu-Finder</h5>
-            <p class="card-text">An LLM-powered indexer that scans educational platforms and generates a searchable database of AI learning resources.</p>
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Projects</h2>
+          <p>AI projects leveraging LLMs to discover and catalog all AI education tools, software, and platforms currently on the market.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">AI Edu-Finder</h5>
+                <p class="card-text">An LLM-powered indexer that scans educational platforms and generates a searchable database of AI learning resources.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
+              </div>
+            </div>
           </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-sm btn-outline-primary">Learn More</a>
-          </div>
+          <!-- Add more cards for each project -->
         </div>
       </div>
-      <!-- Add more cards for each project -->
-    </div>
-  </div>
-</section>
+    </section><!-- /Projects Section -->
     
     <!-- Video Generator Section -->
     <section id="video-generator" class="section light-background">
       <div class="container section-title" data-aos="fade-up">
-        <h2>Video Generator</h2>
-        <p>Describe a scene and create a short video using our AICyto LLMs.</p>
+        <h2>Video Generator (Coming Soon)</h2>
+        <p>Our AI video generation feature is under development. Check back soon!</p>
       </div>
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="input-group">
-              <input id="video-prompt" type="text" class="form-control" placeholder="Enter video description">
-              <button id="video-generate-btn" class="btn btn-primary">Make Video</button>
+            <div class="alert alert-info">
+              <i class="bi bi-info-circle me-2"></i>
+              The video generator feature is currently in development. For now, please email us at <a href="mailto:pcmking@bu.edu">pcmking@bu.edu</a> for AI video creation inquiries.
             </div>
-            <div id="video-output" class="mt-4 text-center"></div>
           </div>
         </div>
       </div>
@@ -394,12 +404,12 @@
               <div class="faq-item faq-active">
                 <h3>What is AICyto Tech's mission?</h3>
                 <div class="faq-content">
-                  <p>AICyto Tech’s core mission is to empower learners everywhere with the knowledge and skills to thrive in the era of artificial intelligence, making education accessible and effective for all.</p>
+                  <p>AICyto Tech's core mission is to empower learners everywhere with the knowledge and skills to thrive in the era of artificial intelligence, making education accessible and effective for all.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
               <div class="faq-item">
-                <h3>Who can benefit from AICyto Tech’s AI education?</h3>
+                <h3>Who can benefit from AICyto Tech's AI education?</h3>
                 <div class="faq-content">
                   <p>Our courses and resources serve students, professionals, teachers, and organizations seeking to build or deepen their expertise in artificial intelligence and machine learning.</p>
                 </div>
@@ -436,7 +446,7 @@
           <div class="col-lg-5">
             <div class="info-box" data-aos="fade-up" data-aos-delay="200">
               <h3>Contact Info</h3>
-              <p>We’re here to support your AI learning journey. Get in touch with our education team!</p>
+              <p>We're here to support your AI learning journey. Get in touch with our education team!</p>
               <div class="info-item" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
                   <i class="bi bi-geo-alt"></i>
@@ -474,10 +484,11 @@
       <p>© <span>Copyright 2024 - 2026</span> <strong class="px-1 sitename">AICyto Tech</strong> <span>All Rights Reserved.</span></p>
       <div class="credits"></div>
       <div class="social-links d-flex justify-content-center mt-3">
-  <a href="https://mpckkk.github.io/AICyto/" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
-  <a href="https://www.linkedin.com/company/aicyto/?viewAsMember=true" target="_blank" title="LinkedIn" class="mx-3"><i class="bi bi-linkedin"></i></a>
-  <a href="https://aicyto.slack.com/archives/C08LX9HBB08" target="_blank" title="Slack"><i class="bi bi-slack"></i></a>
-</div>
+        <a href="https://mpckkk.github.io/AICyto/" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/company/aicyto/?viewAsMember=true" target="_blank" title="LinkedIn" class="mx-3"><i class="bi bi-linkedin"></i></a>
+        <a href="https://aicyto.slack.com/archives/C08LX9HBB08" target="_blank" title="Slack"><i class="bi bi-slack"></i></a>
+      </div>
+    </div>
   </footer>
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -491,52 +502,17 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
   <script>
-    // ===== Video Generator using OpenAI Sora =====
+    // ===== Video Generator - Disabled for GitHub Pages =====
     const videoBtn = document.getElementById('video-generate-btn');
-    const videoPromptInput = document.getElementById('video-prompt');
-    const videoOutput = document.getElementById('video-output');
-    function generateVideo() {
-      const prompt = videoPromptInput.value.trim();
-      if (!prompt) return;
-      videoBtn.disabled = true;
-      videoBtn.innerText = 'Generating...';
-      fetch('https://api.openai.com/v1/videos/generations', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': 'Bearer ' + AI_CYTO_OPENAI_KEY
-        },
-        body: JSON.stringify({
-          model: 'sora-1',
-          prompt: prompt
-        })
-      })
-      .then(r => r.json())
-      .then(data => {
-        const url = data.data?.[0]?.url;
-        if (url) {
-          videoOutput.innerHTML = '<video controls class="img-fluid rounded shadow"><source src="'+url+'" type="video/mp4"></video>';
-        } else {
-          videoOutput.innerHTML = '<p class="text-danger">Failed to generate video.</p>';
-        }
-        videoBtn.disabled = false;
-        videoBtn.innerText = 'Make Video';
-      })
-      .catch(() => {
-        videoOutput.innerHTML = '<p class="text-danger">Error contacting video service.</p>';
-        videoBtn.disabled = false;
-        videoBtn.innerText = 'Make Video';
-      });
-    }
     if (videoBtn) {
-      videoBtn.addEventListener('click', generateVideo);
+      videoBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        alert('Video generator is coming soon! For now, please email us at pcmking@bu.edu for AI video creation inquiries.');
+      });
     }
   </script>
 <script>
-// ========== AICyto Tech AI Chatbot Widget (Education-Focused) ==========
-// ----- CONFIG -----
-const AI_CYTO_OPENAI_KEY = "YOUR_OPENAI_API_KEY_HERE";  // <-- INSERT YOUR API KEY
-// ----- WIDGET INJECTION -----
+// ========== AICyto Tech AI Chatbot Widget (Demo Mode - Safe for GitHub Pages) ==========
 (function() {
   // Inject Bootstrap Icons (if not present)
   if (!document.querySelector('link[href*="bootstrap-icons"]')) {
@@ -558,7 +534,7 @@ const AI_CYTO_OPENAI_KEY = "YOUR_OPENAI_API_KEY_HERE";  // <-- INSERT YOUR API K
         <button id="aicyto-chatbot-close" title="Close">&times;</button>
       </header>
       <div id="aicyto-chatbot-messages">
-        <div class="aicyto-bubble ai">👋 Hi! I’m AICyto’s AI education assistant. Ask me anything about learning AI, our courses, or how to start your journey in artificial intelligence!</div>
+        <div class="aicyto-bubble ai">👋 Hi! I'm AICyto's AI education assistant. Ask me about learning AI, our courses, or how to start your journey in artificial intelligence! (Demo Mode)</div>
       </div>
       <div id="aicyto-chatbot-input-row">
         <input id="aicyto-chatbot-input" placeholder="Type your message..." autocomplete="off" />
@@ -584,7 +560,6 @@ const AI_CYTO_OPENAI_KEY = "YOUR_OPENAI_API_KEY_HERE";  // <-- INSERT YOUR API K
     display: none; position: absolute; bottom: 80px; right: 0; width: 360px; height: 500px;
     background: #fff; border-radius: 22px; box-shadow: 0 6px 38px #0001; overflow: hidden;
     border: 1px solid #e7eaf3; flex-direction: column; max-width: 97vw; max-height: 95vh;
-    flex-direction: column;
   }
   #ai-chatbot-widget-aicyto #aicyto-chatbot-box header {
     background: linear-gradient(90deg, #0062ff 80%, #007cf0 100%);
@@ -634,8 +609,16 @@ const AI_CYTO_OPENAI_KEY = "YOUR_OPENAI_API_KEY_HERE";  // <-- INSERT YOUR API K
   var messages = widget.querySelector("#aicyto-chatbot-messages");
   var input = widget.querySelector("#aicyto-chatbot-input");
   var sendBtn = widget.querySelector("#aicyto-chatbot-send");
-  toggle.onclick = () => { box.style.display = "flex"; input.focus(); };
-  closeBtn.onclick = () => { box.style.display = "none"; };
+  
+  toggle.onclick = () => { 
+    box.style.display = "flex"; 
+    input.focus(); 
+  };
+  
+  closeBtn.onclick = () => { 
+    box.style.display = "none"; 
+  };
+  
   function appendMsg(text, isUser) {
     var div = document.createElement('div');
     div.className = 'aicyto-bubble ' + (isUser ? 'user' : 'ai');
@@ -643,52 +626,76 @@ const AI_CYTO_OPENAI_KEY = "YOUR_OPENAI_API_KEY_HERE";  // <-- INSERT YOUR API K
     messages.appendChild(div);
     setTimeout(() => { messages.scrollTop = messages.scrollHeight; }, 100);
   }
-  function aiReply(userText) {
-    appendMsg(`<span style="color:#7b94b6"><i class="bi bi-robot"></i> Typing...</span>`, false);
-    sendBtn.disabled = true; input.disabled = true;
-    var system_prompt = `You are AICyto Tech's AI education assistant. Always provide friendly, concise, and practical guidance about learning AI, the company's educational mission, and how users can advance their skills or understanding of artificial intelligence. If asked about unrelated topics, politely redirect to AI learning or our education mission.`;
-    fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer " + AI_CYTO_OPENAI_KEY
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
-          {role: "system", content: system_prompt},
-          {role: "user", content: userText}
-        ]
-      })
-    })
-    .then(r => r.json())
-    .then(data => {
-      // Remove "Typing..." bubble
-      let aiBubbles = messages.querySelectorAll('.aicyto-bubble.ai');
-      if (aiBubbles.length && aiBubbles[aiBubbles.length-1].innerHTML.includes("Typing")) {
-        aiBubbles[aiBubbles.length-1].remove();
-      }
-      let reply = data.choices?.[0]?.message?.content || "Sorry, I'm having trouble responding right now.";
-      appendMsg(reply, false);
-      sendBtn.disabled = false; input.disabled = false; input.focus();
-    }).catch(() => {
-      let aiBubbles = messages.querySelectorAll('.aicyto-bubble.ai');
-      if (aiBubbles.length && aiBubbles[aiBubbles.length-1].innerHTML.includes("Typing")) {
-        aiBubbles[aiBubbles.length-1].remove();
-      }
-      appendMsg("Sorry, there was an error connecting to the AI service.", false);
-      sendBtn.disabled = false; input.disabled = false;
-    });
+  
+  // Demo responses for GitHub Pages (no API key needed)
+  function getDemoResponse(userText) {
+    const responses = [
+      "I'm AICyto's AI education assistant! In a live setup, I'd help you learn about AI education. For now, please email us at pcmking@bu.edu for detailed inquiries.",
+      "AICyto Tech focuses on making AI education accessible to everyone through hands-on learning, courses, and practical projects.",
+      "Our courses cover AI fundamentals, machine learning, data science, and practical AI applications for real-world problems.",
+      "To start learning AI with us, visit our website or contact our education team at pcmking@bu.edu for personalized guidance!",
+      "We offer project-based learning, interactive tutorials, and mentorship programs to help you master AI concepts effectively.",
+      "AICyto Tech empowers students and professionals to become AI creators through comprehensive, practical education programs.",
+      "Our mission is to democratize AI education and help build the next generation of AI innovators and thinkers."
+    ];
+    
+    // Simple keyword matching for more relevant responses
+    const lowerText = userText.toLowerCase();
+    if (lowerText.includes('course') || lowerText.includes('learn') || lowerText.includes('study')) {
+      return "Our courses cover AI fundamentals, machine learning, data science, and practical AI applications. Contact us at pcmking@bu.edu for course details!";
+    } else if (lowerText.includes('contact') || lowerText.includes('email') || lowerText.includes('reach')) {
+      return "You can reach our education team at pcmking@bu.edu. We're here to help with your AI learning journey!";
+    } else if (lowerText.includes('start') || lowerText.includes('begin') || lowerText.includes('new')) {
+      return "To start your AI learning journey, we recommend beginning with our AI fundamentals course. Email us at pcmking@bu.edu for guidance!";
+    } else if (lowerText.includes('price') || lowerText.includes('cost') || lowerText.includes('free')) {
+      return "We offer various learning options to suit different needs. Contact us at pcmking@bu.edu for information about pricing and free resources!";
+    }
+    
+    return responses[Math.floor(Math.random() * responses.length)];
   }
+  
+  function aiReply(userText) {
+    // Show typing indicator
+    appendMsg(`<span style="color:#7b94b6"><i class="bi bi-robot"></i> Thinking...</span>`, false);
+    
+    sendBtn.disabled = true; 
+    input.disabled = true;
+    
+    // Simulate API delay
+    setTimeout(() => {
+      // Remove "Thinking..." bubble
+      let aiBubbles = messages.querySelectorAll('.aicyto-bubble.ai');
+      if (aiBubbles.length && aiBubbles[aiBubbles.length-1].innerHTML.includes("Thinking")) {
+        aiBubbles[aiBubbles.length-1].remove();
+      }
+      
+      // Get demo response
+      let reply = getDemoResponse(userText);
+      appendMsg(reply, false);
+      
+      sendBtn.disabled = false; 
+      input.disabled = false; 
+      input.focus();
+    }, 1000 + Math.random() * 1000);
+  }
+  
   function handleSend() {
     var msg = input.value.trim();
     if (!msg) return;
+    
     appendMsg(msg, true);
     input.value = "";
     aiReply(msg);
   }
+  
   sendBtn.onclick = handleSend;
-  input.onkeydown = function(e){ if(e.key==="Enter"){handleSend();}};
+  
+  input.onkeydown = function(e){ 
+    if(e.key === "Enter") {
+      handleSend();
+    }
+  };
+  
   // Close on outside click (mobile-friendly)
   document.addEventListener("mousedown", function(e) {
     if (!widget.contains(e.target) && box.style.display === "flex") {
