@@ -32,7 +32,16 @@
       --font-head: 'Syne', sans-serif;
       --font-body: 'Plus Jakarta Sans', sans-serif;
     }
-
+    body.light {
+      --bg: #f5f7fc;
+      --bg-1: #ffffff;
+      --bg-2: #edf0f8;
+      --text: #111827;
+      --text-muted: #6b7280;
+      --text-soft: #374151;
+      --border: rgba(0,0,0,0.08);
+      --border-accent: rgba(14,201,181,0.4);
+    }
     html { scroll-behavior: smooth; }
 
     body {
@@ -130,6 +139,15 @@
       text-decoration: none; transition: color 0.2s; letter-spacing: 0.01em;
     }
     nav a:hover { color: var(--text); }
+    <button id="theme-toggle" aria-label="Toggle theme" style="
+  background: var(--bg-2); border: 1px solid var(--border);
+  border-radius: 8px; width: 38px; height: 38px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-muted); font-size: 1rem; cursor: pointer;
+  transition: all 0.2s; margin-left: 10px;
+">
+  <i class="bi bi-sun"></i>
+</button>
     .nav-cta {
       background: var(--accent-dim); color: var(--accent);
       border: 1px solid var(--border-accent); border-radius: var(--radius-sm);
@@ -1136,7 +1154,15 @@
       mobileMenu.style.display = 'none';
       mobileToggle.querySelector('i').className = 'bi bi-list';
     });
-  });
+  });// ─── THEME TOGGLE ───
+const themeBtn = document.getElementById('theme-toggle');
+const saved = localStorage.getItem('theme');
+if (saved === 'light') { document.body.classList.add('light'); themeBtn.querySelector('i').className = 'bi bi-moon'; }
+themeBtn.addEventListener('click', () => {
+  const isLight = document.body.classList.toggle('light');
+  themeBtn.querySelector('i').className = isLight ? 'bi bi-moon' : 'bi bi-sun';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
 
   // ─── SCROLL REVEAL ───
   const revealEls = document.querySelectorAll('.reveal');
